@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Grow | Digital Marketing Agency — UK Pricing & Ad Solutions</title>
+  <!-- Google Fonts & simple reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* buttons & links */
+    .btn-primary {
+      display: inline-block;
+      background: #0a2b3e;
+      color: white;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      letter-spacing: -0.2px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+
+    .btn-primary:hover {
+      background: #1f4b6e;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px -8px rgba(10,43,62,0.2);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      border: 1.5px solid #0a2b3e;
+      color: #0a2b3e;
+      font-weight: 600;
+      padding: 11px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .btn-outline:hover {
+      background: #0a2b3e;
+      color: white;
+    }
+
+    /* header / nav */
+    header {
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      border-bottom: 1px solid #eef2f6;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #0f2c39, #2b6a4c);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .logo span {
+      color: #2b6a4c;
+      background: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1f2937;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2b6a4c;
+    }
+
+    /* hero section */
+    .hero {
+      padding: 80px 0 100px 0;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-badge {
+      background: #eef9f2;
+      color: #1b6e43;
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      color: #0a2b3e;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 32px;
+      max-width: 90%;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .stat-item h3 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #0f2c39;
+    }
+    .stat-item p {
+      font-size: 0.9rem;
+      color: #5f6c7a;
+      margin: 0;
+    }
+
+    .hero-image {
+      flex: 1;
+      background: linear-gradient(145deg, #eef5f0, #e2e9e4);
+      border-radius: 42px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero-image svg {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+    }
+
+    /* section general */
+    .section {
+      padding: 90px 0;
+    }
+    .section-dark {
+      background-color: #fafcff;
+      border-top: 1px solid #edf2f7;
+      border-bottom: 1px solid #edf2f7;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0a2b3e;
+      margin-bottom: 12px;
+    }
+    .section-title p {
+      font-size: 1.1rem;
+      color: #5a6874;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ----- DYNAMIC PRICING (UK) + ADS SECTION ----- */
+    .pricing-ads-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      margin-top: 24px;
+    }
+    .pricing-card {
+      flex: 1.2;
+      background: white;
+      border-radius: 40px;
+      padding: 32px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+      border: 1px solid #e9f0ec;
+    }
+    .pricing-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .price-calc {
+      background: #f5f9f6;
+      border-radius: 28px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+    .input-group {
+      margin-bottom: 20px;
+    }
+    .input-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1b3b2f;
+    }
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 60px;
+      border: 1px solid #cbdcd2;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      background: white;
+    }
+    .total-price {
+      background: #0a2b3e;
+      color: white;
+      border-radius: 32px;
+      padding: 18px;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .total-price span {
+      font-size: 2rem;
+      font-weight: 800;
+      display: block;
+    }
+    .ad-spotlight {
+      flex: 1;
+      background: linear-gradient(125deg, #fef9e8, #fff6e5);
+      border-radius: 40px;
+      padding: 32px;
+      border: 1px solid #ffefcf;
+    }
+    .ad-spotlight h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .ad-placements {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ad-item {
+      background: white;
+      border-radius: 28px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      transition: transform 0.2s;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.02);
+      border: 1px solid #ffe6bf;
+    }
+    .ad-item:hover {
+      transform: translateX(5px);
+      border-color: #d4b87a;
+    }
+    .ad-icon {
+      font-size: 2rem;
+    }
+    .ad-details h4 {
+      font-weight: 800;
+    }
+    .ad-details p {
+      font-size: 0.85rem;
+      color: #7e6b47;
+    }
+    .badge-uk {
+      background: #0a2b3e;
+      color: white;
+      border-radius: 40px;
+      padding: 6px 16px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    /* services grid */
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 36px 28px;
+      flex: 1 1 260px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.03);
+      transition: all 0.3s ease;
+      border: 1px solid #eef2f0;
+      text-align: center;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: #cbdcd0;
+    }
+    .service-icon {
+      background: #eef5ec;
+      width: 70px;
+      height: 70px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    /* testimonial */
+    .results-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .results-left {
+      flex: 1;
+    }
+    .results-right {
+      flex: 1;
+      background: #0e2a2f;
+      border-radius: 32px;
+      padding: 32px;
+      color: white;
+    }
+    .testimonial p {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(105deg, #0a2b3e 0%, #1c4e3f 100%);
+      border-radius: 48px;
+      padding: 64px 48px;
+      text-align: center;
+      margin: 40px 0 80px;
+    }
+    .cta-section h2 {
+      font-size: 2.2rem;
+      color: white;
+    }
+    .btn-cta {
+      background: white;
+      color: #0a2b3e;
+      padding: 14px 38px;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+    }
+    footer {
+      background: #f9fbfd;
+      padding: 56px 0 40px;
+      border-top: 1px solid #eef2f0;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .newsletter-form input {
+      padding: 12px 16px;
+      border-radius: 60px;
+      border: 1px solid #cfdfd6;
+      flex: 1;
+    }
+    .newsletter-form button {
+      background: #0a2b3e;
+      border: none;
+      color: white;
+      padding: 0 20px;
+      border-radius: 60px;
+      cursor: pointer;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 860px) {
+      .hero-content h1 { font-size: 2.5rem; }
+      .nav-wrapper { flex-direction: column; gap: 16px; }
+      .pricing-ads-wrapper { flex-direction: column; }
+      .container { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav-wrapper">
+    <div class="logo">GROW<span>.</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Pricing</a>
+      <a href="#">Ad Solutions</a>
+      <a href="#" class="btn-outline" style="padding: 8px 20px;">Contact UK</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">🇬🇧 UK's trusted growth partner</div>
+        <h1>Intelligent ads, <br> transparent pricing.</h1>
+        <p>Performance marketing built for UK brands. From dynamic ad placements to AI-powered campaigns — scale with confidence.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#" class="btn-primary">Get free UK audit →</a>
+          <a href="#" class="btn-outline">Explore ad slots</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><h3>£28M+</h3><p>ad spend managed</p></div>
+          <div class="stat-item"><h3>214%</h3><p>avg. ROAS (UK)</p></div>
+          <div class="stat-item"><h3>24/7</h3><p>programmatic bidding</p></div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="70" y="120" width="360" height="200" rx="30" fill="#D9E6DA" stroke="#AFC5B3" stroke-width="2"/>
+          <circle cx="150" cy="200" r="35" fill="#F9D27E" stroke="#D9B45B" stroke-width="2"/>
+          <circle cx="260" cy="180" r="45" fill="#C3E0D2" stroke="#8DBFA6" stroke-width="2"/>
+          <rect x="320" y="220" width="80" height="60" rx="14" fill="#FFE0B5" stroke="#E1B878" stroke-width="2"/>
+          <path d="M100 320 L400 320" stroke="#91A7A0" stroke-width="4" stroke-dasharray="8 6"/>
+          <text x="160" y="360" font-family="Inter" font-weight="700" fill="#1E4A3B" font-size="20">🇬🇧 +247% UK leads</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMIC PRICING (UK) + AD PLACEMENTS SECTION (core request) -->
+  <div class="container section">
+    <div class="section-title">
+      <h2>Flexible pricing & ad inventory <span class="badge-uk">made for UK</span></h2>
+      <p>Tailored monthly packages + live ad placements. Customize your campaign budget in GBP.</p>
+    </div>
+    <div class="pricing-ads-wrapper">
+      <!-- Dynamic pricing calculator (UK Hosting/Ad budget) -->
+      <div class="pricing-card">
+        <h3>📊 Build your plan</h3>
+        <div class="price-calc">
+          <div class="input-group">
+            <label>🇬🇧 Monthly ad budget (GBP)</label>
+            <input type="range" id="adBudget" min="500" max="25000" step="500" value="4500">
+            <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+              <span>£500</span><span>£25k+</span>
+            </div>
+            <div style="font-weight: 700; margin-top: 8px;">Selected: <span id="budgetValue">£4,500</span></div>
+          </div>
+          <div class="input-group">
+            <label>🚀 Campaign intensity</label>
+            <select id="intensitySelect">
+              <option value="standard">Standard (SEO + Social)</option>
+              <option value="growth" selected>Growth (Multi-channel ads)</option>
+              <option value="elite">Elite (AI + programmatic)</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>🖥️ Hosting & infrastructure (UK servers)</label>
+            <select id="hostingSelect">
+              <option value="basic">Basic hosting – £49/mo</option>
+              <option value="pro" selected>Pro UK hosting – £99/mo (fast CDN)</option>
+              <option value="enterprise">Enterprise cluster – £249/mo</option>
+            </select>
+          </div>
+          <div class="total-price">
+            Estimated monthly investment <span id="totalPriceDisplay">£0</span>
+            <small style="display: block; font-size: 0.75rem; margin-top: 6px;">incl. management + hosting + ad budget</small>
+          </div>
+          <button class="btn-primary" id="quoteBtn" style="width: 100%; margin-top: 24px;">Request this proposal →</button>
+        </div>
+      </div>
+
+      <!-- AD PLACEMENTS showcase (dynamic slots & UK inventory) -->
+      <div class="ad-spotlight">
+        <h3>🎯 Premium ad placements</h3>
+        <p>Targeted UK audiences across premium networks. Reserve your slot.</p>
+        <div class="ad-placements" id="adPlacementsList">
+          <!-- dynamic js will generate but we also put static base -->
+        </div>
+        <div style="margin-top: 24px; background: #f5ede1; border-radius: 28px; padding: 14px; text-align: center;">
+          <span class="badge-uk" style="background:#ab8e54;">live inventory</span> 
+          <span style="font-size: 0.8rem;"> Programmatic guaranteed CPM from £2.8</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="section-dark">
+    <div class="container section">
+      <div class="section-title">
+        <h2>What we deliver across UK & EU</h2>
+        <p>Holistic digital marketing solutions that connect data, creativity, and results.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon">🔍</div><h3>SEO & Visibility</h3><p>Dominate UK search rankings.</p></div>
+        <div class="service-card"><div class="service-icon">⚡</div><h3>Performance Ads</h3><p>Google, Meta, TikTok, Amazon.</p></div>
+        <div class="service-card"><div class="service-icon">📧</div><h3>Email & CRM</h3><p>Personalised retention flows.</p></div>
+        <div class="service-card"><div class="service-icon">🎨</div><h3>Creative Studio</h3><p>Video & copy that converts.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results & Testimonial -->
+  <div class="container section">
+    <div class="results-showcase">
+      <div class="results-left">
+        <h3>Proven results <br> for UK brands.</h3>
+        <ul class="growth-list" style="list-style: none;">
+          <li>📈 <strong>+187%</strong> organic visibility (London retail)</li>
+          <li>⚡ <strong>3.2x</strong> higher conversion rates via programmatic ads</li>
+          <li>🇬🇧 <strong>41%</strong> lower CPA for ecommerce in Manchester</li>
+        </ul>
+        <a href="#" class="btn-outline" style="margin-top: 12px;">View UK case studies →</a>
+      </div>
+      <div class="results-right">
+        <div class="testimonial"><p>“Grow's UK team redefined our ad strategy. Using their placement network and smart bidding, we slashed wasted spend by 34% while doubling revenue.”</p><div class="testimonial-author"><div style="background:#5f9c87; width:44px; height:44px; border-radius:60px;"></div><div>— Sophia Khan, CMO at <strong>Bristol & Co</strong></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA section -->
+  <div class="container">
+    <div class="cta-section">
+      <h2>Ready to dominate your niche in the UK?</h2>
+      <p>Get a bespoke ad plan + hosting recommendation in 24h.</p>
+      <a href="#" class="btn-cta">Claim your free growth roadmap →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo" style="font-size:1.8rem;">GROW<span>.</span></div><p>Data-fueled digital marketing for UK & global brands.</p></div>
+      <div class="footer-links"><h4>Explore</h4><a href="#">Pricing</a><a href="#">Ad inventory</a><a href="#">Careers</a></div>
+      <div class="footer-links"><h4>Support</h4><a href="#">Help centre</a><a href="#">Privacy & Terms</a></div>
+      <div class="footer-newsletter"><h4>Insights for founders</h4><div class="newsletter-form"><input type="email" placeholder="Your work email"><button>→</button></div></div>
+    </div>
+    <div class="copyright">© 2025 Grow Digital Marketing Agency — Accelerate what matters. 🇬🇧 UK head office: London</div>
+  </div>
+</footer>
+
+<script>
+  // DOM elements for dynamic pricing (UK GBP)
+  const adBudgetSlider = document.getElementById('adBudget');
+  const budgetSpan = document.getElementById('budgetValue');
+  const intensitySelect = document.getElementById('intensitySelect');
+  const hostingSelect = document.getElementById('hostingSelect');
+  const totalSpan = document.getElementById('totalPriceDisplay');
+  const quoteBtn = document.getElementById('quoteBtn');
+
+  // Ad placements dynamic data (showcases placements with prices)
+  const adPlacementsData = [
+    { name: "Google Shopping UK", cpm: "£3.20", audience: "High intent shoppers", icon: "🛒" },
+    { name: "Meta Dynamic Retargeting", cpm: "£2.90", audience: "UK + EU travellers", icon: "📱" },
+    { name: "Programmatic Display (The Guardian, Sky)", cpm: "£4.10", audience: "Premium news readers", icon: "📰" },
+    { name: "TikTok Spark Ads UK", cpm: "£3.50", audience: "Gen Z & Millennials", icon: "🎵" }
+  ];
+
+  function renderAdPlacements() {
+    const container = document.getElementById('adPlacementsList');
+    if(container){
+      container.innerHTML = adPlacementsData.map(ad => `
+        <div class="ad-item">
+          <div class="ad-icon">${ad.icon}</div>
+          <div class="ad-details">
+            <h4>${ad.name} <span class="badge-uk" style="background:#d9b45b; color:#2c2b26;">${ad.cpm} CPM</span></h4>
+            <p>${ad.audience} · Available now for UK campaigns</p>
+          </div>
+          <div style="margin-left: auto;"><a href="#" style="font-weight:600; text-decoration:none; color:#2b6a4c;">Reserve →</a></div>
+        </div>
+      `).join('');
+    }
+  }
+
+  function getHostingPrice() {
+    const val = hostingSelect.value;
+    if(val === 'basic') return 49;
+    if(val === 'pro') return 99;
+    return 249;
+  }
+
+  function getIntensityManagementFee() {
+    const intensity = intensitySelect.value;
+    if(intensity === 'standard') return 599;
+    if(intensity === 'growth') return 899;
+    return 1499; // elite
+  }
+
+  function updateTotalPrice() {
+    let adBudget = parseInt(adBudgetSlider.value, 10);
+    budgetSpan.innerText = `£${adBudget.toLocaleString()}`;
+    const hosting = getHostingPrice();
+    const management = getIntensityManagementFee();
+    const total = adBudget + hosting + management;
+    totalSpan.innerText = `£${total.toLocaleString()}`;
+    return total;
+  }
+
+  adBudgetSlider.addEventListener('input', updateTotalPrice);
+  intensitySelect.addEventListener('change', updateTotalPrice);
+  hostingSelect.addEventListener('change', updateTotalPrice);
+  
+  // initial
+  renderAdPlacements();
+  updateTotalPrice();
+
+  // Quote button interaction (dynamic proposal alert)
+  quoteBtn.addEventListener('click', () => {
+    const budget = parseInt(adBudgetSlider.value, 10);
+    const intensityText = intensitySelect.options[intensitySelect.selectedIndex]?.text;
+    const hostingText = hostingSelect.options[hostingSelect.selectedIndex]?.text;
+    const total = updateTotalPrice();
+    alert(`📩 UK proposal ready!\n\nAd budget: £${budget}\nCampaign: ${intensityText}\nHosting plan: ${hostingText}\nTotal monthly: £${total}\n\nA dedicated UK account manager will reach out within 2 hours.`);
+  });
+
+  // small demo for newsletter
+  const newsletterBtn = document.querySelector('.newsletter-form button');
+  if(newsletterBtn) {
+    newsletterBtn.addEventListener('click', function(e){
+      const inputField = document.querySelector('.newsletter-form input');
+      if(inputField.value.trim() !== ""){
+        alert("🎉 Thanks! We'll send UK growth insights to " + inputField.value);
+        inputField.value = "";
+      } else {
+        alert("Please enter an email address to subscribe.");
+      }
+    });
+  }
+
+  // add hover to ad items reservation
+  document.addEventListener('click', (e) => {
+    if(e.target.closest('.ad-item a')){
+      e.preventDefault();
+      alert("✨ Ad placement request sent. Our UK media team will contact you to secure inventory & pricing.");
+    }
+  });
+</script>
+</body>
+</html>
